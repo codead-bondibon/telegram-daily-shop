@@ -1,0 +1,20 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:admin@localhost:27017/telegram-daily-shop?authSource=admin
+      url: ${MONGODB_URI:mongodb://localhost:27017/telegram-daily-shop}
+      database: ${MONGODB_DATABASE:telegram-daily-shop}
+      authentication-database: admin
+      password: admin
+      username: admin
+      auto-index-creation: true
+  mongodb:
+    embedded:
+      version: 4.0.21
+
+# Telegram Bot Configuration
+telegram:
+  bot:
+    username: ${TELEGRAM_BOT_USERNAME:daily_shops_store_bot}
+    token: ${TELEGRAM_BOT_TOKEN:8307080106:AAElnaOKKkOw-J48Vc1gzskvyst_DuGVhtQ}
+    webhook-path: ${TELEGRAM_WEBHOOK_PATH:/webhook}
